@@ -1,155 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Haaste - Coming Soon</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      height: 100%;
-      font-family: 'Rubik', sans-serif;
-    }
-
-    .background {
-      background: url('bg.jpg') no-repeat center center/cover;
-      height: 100%;
-      width: 100%;
-      position: relative;
-    }
-
-    .overlay {
-      background-color: rgba(29, 39, 42, 0.55);
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
-
-    .logo {
-      position: absolute;
-      top: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      height: 62.5px;
-      z-index: 2;
-    }
-
-    .content-wrapper {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-      width: 90%;
-      max-width: 500px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 60px; /* 20% bigger than 50px */
-      font-family: 'Helvetica Neue', sans-serif;
-      font-weight: bold;
-      color: white;
-      margin-bottom: 10px;
-    }
-
-    p.tagline {
-      font-size: 22px; /* 20% bigger than 18px */
-      color: white;
-      font-weight: 400;
-      margin-bottom: 30px;
-    }
-
-    .form-wrapper {
-      background-color: rgba(29, 39, 42, 0.75);
-      padding: 20px;
-      border-radius: 10px;
-      width: 100%;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    input, button {
-      padding: 12px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-    }
-
-    input {
-      background-color: #fff;
-      color: #000;
-    }
-
-    button {
-      background-color: #ff6600;
-      color: #fff;
-      cursor: pointer;
-    }
-
-    footer {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-      color: #fff;
-      font-size: 14px;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 42px;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haaste – Coming Soon</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-      p.tagline {
-        font-size: 18px;
+
+      body,
+      html {
+        height: 100%;
+        font-family: 'Rubik', sans-serif;
       }
+
+      .background {
+        background-image: url('bg.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+        position: relative;
+      }
+
+      .overlay {
+        background-color: rgba(29, 39, 42, 0.55);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .content {
+        color: white;
+        text-align: center;
+        max-width: 600px;
+        padding: 20px;
+      }
+
       .logo {
-        top: 20px;
-        height: 50px;
+        width: 160px; /* Adjusted 30% bigger */
+        margin: 0 auto 40px;
+        display: block;
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="background">
-    <div class="overlay"></div>
 
-    <!-- Logo -->
-    <img src="logo.svg" alt="Haaste Logo" class="logo">
+      h1 {
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
 
-    <!-- Content -->
-    <div class="content-wrapper">
-      <h1>Coming Soon</h1>
-      <p class="tagline">There is a better way to rent.</p>
+      h2 {
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 40px;
+      }
 
-      <div class="form-wrapper">
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <input type="text" name="name" placeholder="Full name" required>
-          <input type="email" name="email" placeholder="Email address" required>
-          <button type="submit">Sign up</button>
-        </form>
+      .lead {
+        font-size: 18px;
+        margin-bottom: 30px;
+        font-weight: 300;
+      }
+
+      form {
+        background-color: rgba(29, 39, 42, 0.75);
+        padding: 20px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      input[type='email'] {
+        padding: 12px;
+        border-radius: 6px;
+        border: none;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 12px;
+        background-color: #ffffff;
+        color: #1d272a;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      @media screen and (max-width: 768px) {
+        .logo {
+          width: 120px;
+        }
+
+        h1 {
+          font-size: 36px;
+        }
+
+        h2 {
+          font-size: 20px;
+        }
+
+        .lead {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="background">
+      <div class="overlay">
+        <div class="content">
+          <img src="logo.svg" alt="Haaste Logo" class="logo" />
+
+          <h1>Coming Soon</h1>
+          <h2>There’s a better way to rent</h2>
+
+          <p class="lead">
+            Sign up to be an early adopter and <br />
+            lock in a 50% lifetime discount.
+          </p>
+
+          <form
+            action="https://formspree.io/f/myzeowyl" 
+            method="POST"
+          >
+            <input type="email" name="email" placeholder="Enter your email" required />
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
       </div>
     </div>
-
-    <!-- Footer -->
-    <footer>2025 © Haaste. All rights reserved.</footer>
-  </div>
-</body>
+  </body>
 </html>
