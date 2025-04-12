@@ -2,21 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Haaste - Coming Soon</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Rubik', sans-serif;
     }
 
     body, html {
       height: 100%;
-      overflow: hidden;
+      font-family: 'Rubik', sans-serif;
     }
 
     .background {
@@ -27,7 +25,7 @@
     }
 
     .overlay {
-      background-color: rgba(29, 39, 42, 0.5); /* 50% transparent #1D272A */
+      background-color: rgba(29, 39, 42, 0.55);
       position: absolute;
       height: 100%;
       width: 100%;
@@ -36,40 +34,49 @@
       z-index: 1;
     }
 
-    .content {
-      position: absolute;
-      top: 50%;
-      left: 65%; /* shifted right */
-      transform: translate(-50%, -50%);
-      z-index: 2;
-      text-align: left;
-      color: white;
-      width: 400px;
-    }
-
     .logo {
       position: absolute;
       top: 40px;
-      left: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 62.5px;
       z-index: 2;
-      height: 50px;
+    }
+
+    .content-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 90%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     h1 {
-      font-size: 50px;
+      font-size: 60px; /* 20% bigger than 50px */
       font-family: 'Helvetica Neue', sans-serif;
       font-weight: bold;
+      color: white;
+      margin-bottom: 10px;
     }
 
     p.tagline {
-      margin-top: 10px;
+      font-size: 22px; /* 20% bigger than 18px */
+      color: white;
       font-weight: 400;
-      font-size: 18px;
+      margin-bottom: 30px;
     }
 
-    p.description {
-      margin: 30px 0;
-      font-weight: 300;
+    .form-wrapper {
+      background-color: rgba(29, 39, 42, 0.75);
+      padding: 20px;
+      border-radius: 10px;
+      width: 100%;
     }
 
     form {
@@ -80,9 +87,9 @@
 
     input, button {
       padding: 12px;
+      font-size: 16px;
       border: none;
       border-radius: 5px;
-      font-size: 16px;
     }
 
     input {
@@ -107,15 +114,15 @@
     }
 
     @media (max-width: 768px) {
-      .content {
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
+      h1 {
+        font-size: 42px;
       }
-
+      p.tagline {
+        font-size: 18px;
+      }
       .logo {
-        left: 20px;
-        height: 40px;
+        top: 20px;
+        height: 50px;
       }
     }
   </style>
@@ -127,22 +134,22 @@
     <!-- Logo -->
     <img src="logo.svg" alt="Haaste Logo" class="logo">
 
-    <!-- Main Content -->
-    <div class="content">
-      <h1>Coming Soon:</h1>
+    <!-- Content -->
+    <div class="content-wrapper">
+      <h1>Coming Soon</h1>
       <p class="tagline">There is a better way to rent.</p>
-      <p class="description">Sign up to be an early adopter and lock in a 50% lifetime discount.</p>
 
-      <!-- Form -->
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <input type="text" name="name" placeholder="Full name" required>
-        <input type="email" name="email" placeholder="Email address" required>
-        <button type="submit">Sign up</button>
-      </form>
+      <div class="form-wrapper">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="text" name="name" placeholder="Full name" required>
+          <input type="email" name="email" placeholder="Email address" required>
+          <button type="submit">Sign up</button>
+        </form>
+      </div>
     </div>
 
     <!-- Footer -->
-    <footer>2025 © Haaste All rights reserved</footer>
+    <footer>2025 © Haaste. All rights reserved.</footer>
   </div>
 </body>
 </html>
